@@ -1,0 +1,20 @@
+import { useState } from 'react'
+import {Routes, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Homepage from './pages/Home';
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div className='App'>
+      <h1>Meme Generator</h1>
+      <Routes>
+        <Route path='/' element={ <Homepage /> }></Route>
+      </Routes>
+    </div>
+  )
+}
+
+export default App
