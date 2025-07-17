@@ -10,7 +10,7 @@ const Navigate = () => {
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="#meme">Create your own meme</Nav.Link>
+          <Nav.Link href="/create-meme">Create your own meme</Nav.Link>
           
         </Nav>
         <Nav>
