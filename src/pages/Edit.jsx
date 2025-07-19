@@ -15,16 +15,16 @@ const EditPage = () => {
     }
 
     const memeRef = useRef(null);
-    const name = params.get('title') || 'meme'; // Default name
+    const name = params.get('title') || 'meme'; 
 
     const handleSave = () => {
         if (memeRef.current) {
             html2canvas(memeRef.current, {
-                useCORS: true, // Important if your image is from a different origin    
+                useCORS: true,  
             }).then(canvas => {
                 canvas.toBlob(function(blob) {
                     saveAs(blob, `${name}.jpeg`);
-                }, 'image/jpeg', 0.95); // Adjust quality (0-1)
+                }, 'image/jpeg', 1); 
             }).catch(err => {
                 console.error("Error capturing canvas:", err);
                 alert("Failed to save image. Check console for details.");
@@ -40,16 +40,16 @@ const EditPage = () => {
             <div ref={memeRef} className="meme mt-5 mb-5" style={{ 
                     width: '400px', 
                     margin: '0 auto', 
-                    display: 'flex', // Keep this one
-                    flexDirection: 'column', // Keep this one
-                    alignItems: 'center', // Keep this one
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
                     position: 'relative',
                     border: '1px solid #ccc',
                     padding: '10px',
                     backgroundColor: '#fff',
                     overflow: 'hidden'
                     }}>
-                <img src={params.get('url')} width='400px' crossOrigin="anonymous" alt="Meme base" /> {/* Add crossOrigin if image is external */}
+                <img src={params.get('url')} width='400px' crossOrigin="anonymous" alt="Meme base" /> 
                 {
                     Array(count).fill(0).map((e, i) => <Text key={i} />)
                 }

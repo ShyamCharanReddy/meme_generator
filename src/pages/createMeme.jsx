@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form, Container, Row, Col, Card} from 'react-bootstrap';
 import Navbar from '../assets/Components/Navbar'
-
+import SimpleAuthForm from './Auth'
 
 
 
 const CreateYourOwnMeme = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
-    const [errorMessage, setErrorMessage] = useState(''); // State for error message
+    const [errorMessage, setErrorMessage] = useState(''); 
     const navigate = useNavigate();
 
     
@@ -18,20 +18,20 @@ const CreateYourOwnMeme = () => {
         if (file) {
             setSelectedImage(file);
             setImagePreviewUrl(URL.createObjectURL(file));
-            setErrorMessage(''); // Clear error message on new selection
+            setErrorMessage(''); 
         } else {
             setSelectedImage(null);
             setImagePreviewUrl(null);
         }
     };
 
-    // Handles the "Create Meme" button click
+
     const handleCreateMeme = () => {
         if (selectedImage && imagePreviewUrl) {
             const defaultMemeName = `Uploaded Meme - ${new Date().toLocaleDateString()}`;
             navigate(`/edit?url=${encodeURIComponent(imagePreviewUrl)}&name=${encodeURIComponent(defaultMemeName)}`);
         } else {
-            setErrorMessage('Please select an image first!'); // Set error message
+            setErrorMessage('Please select an image first!');
         }
     };
 
@@ -70,7 +70,7 @@ const CreateYourOwnMeme = () => {
                                         <img 
                                             src={imagePreviewUrl} 
                                             alt="Image Preview" 
-                                            className="img-fluid rounded-2 border border-light meme-preview-image" // Added custom class and Bootstrap classes
+                                            className="img-fluid rounded-2 border border-light meme-preview-image"
                                         />
                                     </div>
                                 )}
@@ -91,6 +91,7 @@ const CreateYourOwnMeme = () => {
                 </Col>
             </Row>
         </Container>
+        
     );
 };
 

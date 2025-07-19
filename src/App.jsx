@@ -1,24 +1,39 @@
-import { useState } from 'react'
-import {Routes, Route} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Homepage from './pages/Home';
-import EditPage from './pages/Edit';
 import CreateMeme from './pages/createMeme';
+import EditPage from './pages/Edit';
+import Login from './pages/Auth';
+import CheckAuth from './assets/Components/CheckAuth';
+
+
+import { signOut } from "firebase/auth";
+import { auth } from './firebase';
+
+
+
+
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
+useEffect(() => {
+  signOut(auth); // Force logout to test CheckAuth
+}, []);
   return (
     <div className='App'>
-      <h1>Meme Generator</h1>
       <Routes>
-        <Route path='/' element={ <Homepage /> }></Route>
-        <Route path='/create-meme' element={ <CreateMeme /> }></Route>
-        <Route path='/edit' element={ <EditPage /> }></Route>
+        <Route path='/home' element={<CheckAuth><Homepage /></CheckAuth>} />
+        <Route path='/create-meme' element={<CheckAuth><CreateMeme /></CheckAuth>} />
+        <Route path='/edit' element={<CheckAuth><EditPage /></CheckAuth>} />
+        <Route path='/' element={<Login />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+
+export default App;

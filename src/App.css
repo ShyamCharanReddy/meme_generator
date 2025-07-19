@@ -1,0 +1,90 @@
+/* App.css */
+
+/* Global styles (you might already have these from previous discussions) */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #FEF8DD; /* Your preferred background color */
+  font-family: sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Styles for SimpleAuthForm component */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FEF8DD; /* Ensure this matches your body background if not already set */
+    font-family: sans-serif;
+}
+
+.auth-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.auth-title {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-button-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.auth-active-button {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.auth-inactive-button {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.auth-submit-button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
