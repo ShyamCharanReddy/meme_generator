@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link}  from 'react-router-dom'
 import {Navbar, Nav} from 'react-bootstrap'
-
+import { FaUserCircle } from 'react-icons/fa'
 const Navigate = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top"> 
@@ -13,7 +13,7 @@ const Navigate = () => {
           <Nav.Link href="/create-meme">Create your own meme</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href="/" className=''>Login/Signup</Nav.Link>
+          <Nav.Link href="/" className=''><FaUserCircle className="user-icon" /></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

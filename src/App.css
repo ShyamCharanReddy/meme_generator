@@ -5,22 +5,28 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #FEF8DD; /* Your preferred background color */
+  background-color: #FEF8DD; 
   font-family: sans-serif;
+  background-image: url('./assets/images/4851275.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
-#root {
-  min-height: 100vh;
+
+#root { 
+      min-height: 100vh; 
 }
 
-/* Styles for SimpleAuthForm component */
+
 
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #FEF8DD; /* Ensure this matches your body background if not already set */
+    background-color: #FEF8DD; 
     font-family: sans-serif;
 }
 

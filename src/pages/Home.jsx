@@ -19,7 +19,7 @@ const Homepage = () => {
         <div className="nav-bar">
             <Navbar/>
         </div>
-        <div className="row">
+        <div className="row" style={{margin:'60px'}}>
             {
                 data.map(element => <MemeCard key = {element.id} img = {element.url} title = {element.name}/>)
             }

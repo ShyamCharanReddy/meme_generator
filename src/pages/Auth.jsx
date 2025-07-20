@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../assets/Components/Navbar'
 import '../App.css'
-import CheckAuth from '../assets/Components/CheckAuth';
 
 
-import { auth } from '../firebase'; // adjust the path if needed
+import { auth } from '../firebase'; 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import Homepage from './Home';
 
@@ -15,21 +14,13 @@ import Homepage from './Home';
 
 
 
-const SimpleAuthForm = ({setAuthenticated}) => {
-
-
-
-   
-
-
-
-
+const SimpleAuthForm = ({}) => {
 
     const [isLoginMode, setIsLoginMode] = useState(true); 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [username, setUsername] = useState(''); 
     const navigate = useNavigate();
+    const [authenticated, setAuthenticated] = useState(false)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -38,7 +29,8 @@ const SimpleAuthForm = ({setAuthenticated}) => {
             setPersistence(auth, browserLocalPersistence)
             .then(() => signInWithEmailAndPassword(auth, email, password))
             .then(() => {
-                navigate('/home'); // onAuthStateChanged will handle setting state
+                
+                navigate('/home'); 
             })
             .catch((error) => {
                 alert(error.message);
@@ -51,7 +43,7 @@ const SimpleAuthForm = ({setAuthenticated}) => {
 
         setEmail('');
         setPassword('');
-        setUsername('');
+        
     };
 
 
@@ -63,7 +55,7 @@ const SimpleAuthForm = ({setAuthenticated}) => {
 
     return (
         <div>
-            <Navbar />
+            
             
         <div className="auth-container">
             <div className="auth-card">
