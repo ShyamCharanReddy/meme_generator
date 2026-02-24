@@ -19,10 +19,6 @@ import { auth } from './firebase';
 
 function App() {
 
-useEffect(() => {
-  signOut(auth); 
-}, []);
-
 const [authenticated, setAuthenticated] = useState(false);
 
   return (

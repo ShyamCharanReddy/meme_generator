@@ -37,6 +37,7 @@ const EditPage = () => {
             <div className="nav-bar">
                 <Navbar/>
             </div>
+
             <div ref={memeRef} className="meme mt-5 mb-5" style={{ 
                     width: '400px', 
                     margin: '0 auto', 
@@ -49,6 +50,7 @@ const EditPage = () => {
                     backgroundColor: '#fff',
                     overflow: 'hidden'
                     }}>
+                        
                 <img src={params.get('url')} width='400px' crossOrigin="anonymous" alt="Meme base" /> 
                 {
                     Array(count).fill(0).map((e, i) => <Text key={i} />)
