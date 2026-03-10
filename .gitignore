@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Backend Secrets
+backend/.env
+backend/node_modules
