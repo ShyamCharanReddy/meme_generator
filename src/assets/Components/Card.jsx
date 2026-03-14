@@ -5,41 +5,42 @@ import { useNavigate } from "react-router-dom";
 
 
 const MemeCard = (props) => {
+
     const navigate = useNavigate();
-    return(
-        <Card 
-  className="flex flex-col rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20" 
-  style={{ 
-    width: '18rem', 
-    margin: '40px', 
-    background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent white
-    backdropFilter: 'blur(10px)',           // The "Glass" effect
-    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)' 
-  }}
->
-  <div className="h-48 overflow-hidden bg-black/20">
-    <Card.Img 
-      variant='top' 
-      src={props.img} 
-      className="w-full h-full object-contain" 
-    />
-  </div>
-  
-  <Card.Body className="p-4 flex flex-col justify-between grow">
-    <Card.Title className="text-white font-bold text-lg mb-4 truncate">
-      {props.title}
-    </Card.Title>
     
-    <Button 
-      onClick={e => navigate(`/edit?url=${props.img}&title=${props.title}`)} 
-      className="w-full bg-blue-600 hover:bg-blue-500 border-none py-2 rounded-md font-semibold transition-colors"
-      variant='primary'
-    >
-      Edit Meme
-    </Button>
-  </Card.Body>
-</Card>
-    )
-}
+    return (
+        <Card style={{ 
+            backgroundColor: '#1a1a1a', 
+            border: '1px solid #333',
+            borderRadius: '15px',
+            transition: 'all 0.3s ease',
+            overflow: 'hidden'
+        }} className="h-100 shadow-lg meme-hover-card">
+            
+            <Card.Img 
+                variant="top" 
+                src={props.img} 
+                style={{ objectFit: 'contain', height: '200px', padding: '15px' }} 
+            />
+            
+            <Card.Body style={{ backgroundColor: '#222', borderTop: '1px solid #333' }} className="d-flex flex-column justify-content-between">
+                <Card.Title style={{ color: '#fff', fontSize: '1rem', fontWeight: '600' }} className="text-center mb-3">
+                    {props.title}
+                </Card.Title>
+                
+                <Button 
+                    onClick={() => navigate(`/edit?url=${props.img}&title=${props.title}`)} 
+                    variant="outline-info"
+                    style={{ fontWeight: 'bold', borderRadius: '8px' }}
+                >
+                    Edit Meme
+                </Button>
+            </Card.Body>
+        </Card>
+    );
+};
 
 export default MemeCard;
+
+
+
