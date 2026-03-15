@@ -41,15 +41,18 @@ Follow these steps to set up the project locally on your machine.
 
 1. Clone the repository:
     git clone https://github.com/ShyamCharanReddy/meme_generator.git
+    
     cd meme_generator
 
 2. Setup the Backend:
     cd backend
+    
     npm install
 
     Create a .env file in the backend folder and add the following:
     PORT=5000
     MONGO_URI=your_mongodb_connection_string
+    
     JWT_SECRET=your_super_secret_jwt_key
 
     Start the backend server:
@@ -64,4 +67,6 @@ Follow these steps to set up the project locally on your machine.
     npm run dev
 
 4. Open the App:
-    Visit http://localhost:5173 in your browser to start making memes!
+    Visit http://localhost:5173 in your browser.
+
+    
