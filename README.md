@@ -71,4 +71,14 @@ Follow these steps to set up the project locally on your machine.
 4. Open the App:
     Visit http://localhost:5173 in your browser.
 
-    
+<img width="1870" height="986" alt="Image" src="https://github.com/user-attachments/assets/d76fce1b-c6ed-40ed-811a-bfab87a811b2" />
+
+<img width="1870" height="986" alt="Image" src="https://github.com/user-attachments/assets/982af249-b6f2-4ed6-af9d-441062b6e8da" />
+
+<img width="1874" height="1013" alt="Image" src="https://github.com/user-attachments/assets/37f01959-13d5-4d04-8c4e-2857465ce999" />
+
+<img width="1874" height="1013" alt="Image" src="https://github.com/user-attachments/assets/23d0696b-80bd-4116-aed9-7f1b2126a839" />
+
+<img width="1874" height="1013" alt="Image" src="https://github.com/user-attachments/assets/2e952f26-f2f6-47d0-b1e9-bddd39120198" />
+
+<img width="1874" height="1013" alt="Image" src="https://github.com/user-attachments/assets/78e5be89-6cc6-4468-a513-100b1fdc2e68" />
