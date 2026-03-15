@@ -50,7 +50,9 @@ Follow these steps to set up the project locally on your machine.
     npm install
 
     Create a .env file in the backend folder and add the following:
+    
     PORT=5000
+    
     MONGO_URI=your_mongodb_connection_string
     
     JWT_SECRET=your_super_secret_jwt_key
