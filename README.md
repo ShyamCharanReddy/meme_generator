@@ -1,5 +1,6 @@
 #  MEMER - Interactive Full-Stack Meme Generator
 
+
 A robust MERN stack application that allows users to create, download, and save custom memes. Featuring a sleek dark-mode "glassmorphism" UI, an interactive canvas editor, and secure user authentication.
 
 ##  Features
