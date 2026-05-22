@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 
 //cors -> allowing cross domain access &express.json() -> converting raw data to java script object(getting req.body)
 app.use(cors({
-  origin: "https://bucolic-chaja-e923e7.netlify.app", 
+  origin: "https://imagememegenerator.netlify.app", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
